@@ -9,30 +9,31 @@
         font-family: Arial, sans-serif;
         text-align: center;
         padding: 20px;
-        background-color: #f4f4f4;
+        background-color: #222; /* Dark background color */
+        color: #fff; /* Light text color */
     }
     h1 {
-        color: #333;
+        color: #fff;
     }
     p {
-        color: #666;
+        color: #ccc;
     }
-    form {
-        margin: 0 auto;
-        max-width: 400px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], select {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="submit"],
+    select {
         display: block;
         width: calc(100% - 16px);
-        margin: 8px;
+        margin: 0 auto;
+        margin-bottom: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #888;
         border-radius: 4px;
         box-sizing: border-box;
+        background-color: #444; /* Dark input background color */
+        color: #fff; /* Light input text color */
     }
     input[type="submit"] {
         background-color: #4CAF50;
@@ -49,30 +50,13 @@
         border-top: 4px solid #3498db;
         width: 30px;
         height: 30px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
         animation: spin 2s linear infinite;
         margin: 0 auto;
         margin-top: 20px;
         display: none;
     }
-    #aprilFoolMessage {
-        margin-top: 20px;
-    }
-    #aprilFoolMessage img {
-        width: 300px;
-        height: 200px;
-        border-radius: 8px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+    .hidden {
+        display: none;
     }
 </style>
 </head>
@@ -81,21 +65,21 @@
 <p>With our revolutionary dating algorithm, we'll match you with your perfect partner!</p>
 <form id="soulmateForm">
     <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone Number" required>
     <select name="gender" required>
         <option value="" disabled selected>Select your gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
     </select>
+    <input type="number" name="age" placeholder="Your Age" required>
+    <input type="text" name="socialMedia" placeholder="Your Social Media Link" required>
     <input type="submit" value="Find My Soulmate!">
     <div class="loader" id="loader"></div>
 </form>
 
-<div id="aprilFoolMessage" style="display:none;">
+<div id="aprilFoolMessage" class="hidden">
     <img src="https://d3o9zigtf206n3.cloudfront.net/646726c1b6116b2b9ba15fa7/2024-03-31/fID0B0TJGmTe/bahut_tez_ho_rahe_ho_saalo_carryminati_1024x576__1_.webp" alt="April Fool">
-    <p>Oh, dating is such a breeze, isn't it? I mean, who needs luck, chemistry, or compatibility when you have AI, right? 😂</p>
+    <p><strong>April Fool!</strong> You thought finding your soulmate was as easy as ordering pizza? Ha! Oh, dating is such a breeze, isn't it? I mean, who needs luck, chemistry, or compatibility when you have AI, right? 😂</p>
 </div>
 
 <script>
@@ -112,4 +96,3 @@
 
 </body>
 </html>
-
